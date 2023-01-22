@@ -1,7 +1,6 @@
 use async_trait::async_trait;
 use reqwest::{header::{HeaderMap, HeaderValue, IntoHeaderName}, Response, ClientBuilder, Url};
 use crate::{prelude::*, model_translations::{ShopeeSearchResult, ShopeeFilterConfig}};
-use serde_json;
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum UrlType {
