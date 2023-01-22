@@ -5,17 +5,17 @@ use serde_json::Error as JSONError;
 
 #[derive(Error, Debug)]
 pub enum OhMyError {
-  #[error("client error")]
+  #[error(transparent)]
   Client (
     #[from]
     RequestError
   ),
-  #[error("URL error")]
+  #[error(transparent)]
   URL (
     #[from]
     ParseError
   ),
-  #[error("parse JSON error")]
+  #[error(transparent)]
   JSON (
     #[from]
     JSONError
