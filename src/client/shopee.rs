@@ -1,6 +1,7 @@
 use async_trait::async_trait;
 use reqwest::{header::{HeaderMap, HeaderValue, IntoHeaderName}, Response, ClientBuilder, Url};
-use crate::{prelude::*, model_translations::ShopeeSearchResult};
+use crate::{prelude::*, model_translations::{ShopeeSearchResult, ShopeeFilterConfig}};
+use serde_json;
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum UrlType {
@@ -37,6 +38,25 @@ impl Shopee {
       .await?;
 
     let json_response = response.json::<ShopeeSearchResult>().await?;
+    Ok(json_response)
+  }
+
+  pub async fn get_filter_config(&self) -> Result<ShopeeFilterConfig> {
+    let builder = ClientBuilder::new();
+    let client = builder
+      .default_headers(self.headers.clone())
+      .build()?;
+
+    let url = Url::parse(self.url.as_str())?;
+
+    let response = client
+      .get(url)
+      .send()
+      .await?;
+
+    let response = response.text().await?;
+    let json_response = serde_json::from_str::<ShopeeFilterConfig>(&response)?;
+
     Ok(json_response)
   }
 }

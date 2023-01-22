@@ -1,6 +1,7 @@
 use thiserror::Error;
 use reqwest::Error as RequestError;
 use url::ParseError;
+use serde_json::Error as JSONError;
 
 #[derive(Error, Debug)]
 pub enum OhMyError {
@@ -13,5 +14,10 @@ pub enum OhMyError {
   URL (
     #[from]
     ParseError
+  ),
+  #[error("parse JSON error")]
+  JSON (
+    #[from]
+    JSONError
   )
 }
