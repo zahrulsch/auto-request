@@ -280,7 +280,7 @@ pub struct VideoInfoList {
     // pub formats: Value,
     pub formats: Vec<Format>,
     #[serde(rename = "default_format")]
-    pub default_format: DefaultFormat,
+    pub default_format: Value,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
