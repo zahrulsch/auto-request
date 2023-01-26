@@ -1,3 +1,4 @@
+
 use serde_derive::Deserialize;
 use serde_derive::Serialize;
 use serde_json::Value;
@@ -5,63 +6,63 @@ use serde_json::Value;
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ShopeeSearchResult {
-    // #[serde(rename = "bff_meta")]
-    // pub bff_meta: Value,
-    // pub error: Value,
-    // #[serde(rename = "error_msg")]
-    // pub error_msg: Value,
-    // #[serde(rename = "reserved_keyword")]
-    // pub reserved_keyword: Value,
-    // #[serde(rename = "suggestion_algorithm")]
-    // pub suggestion_algorithm: Value,
-    // pub algorithm: String,
-    // #[serde(rename = "total_count")]
-    // pub total_count: Value,
+    #[serde(rename = "bff_meta")]
+    pub bff_meta: Value,
+    pub error: Value,
+    #[serde(rename = "error_msg")]
+    pub error_msg: Value,
+    #[serde(rename = "reserved_keyword")]
+    pub reserved_keyword: Value,
+    #[serde(rename = "suggestion_algorithm")]
+    pub suggestion_algorithm: Value,
+    pub algorithm: String,
+    #[serde(rename = "total_count")]
+    pub total_count: i64,
     // pub nomore: bool,
     pub items: Vec<Item>,
     // pub items: Value,
-    // #[serde(rename = "price_adjust")]
-    // pub price_adjust: Value,
-    // pub adjust: Adjust,
-    // #[serde(rename = "total_ads_count")]
-    // pub total_ads_count: i64,
-    // #[serde(rename = "hint_keywords")]
-    // pub hint_keywords: Value,
-    // #[serde(rename = "show_disclaimer")]
-    // pub show_disclaimer: bool,
-    // #[serde(rename = "json_data")]
-    // pub json_data: String,
-    // #[serde(rename = "query_rewrite")]
-    // pub query_rewrite: QueryRewrite,
-    // #[serde(rename = "disclaimer_infos")]
+    #[serde(rename = "price_adjust")]
+    pub price_adjust: Value,
+    pub adjust: Adjust,
+    #[serde(rename = "total_ads_count")]
+    pub total_ads_count: i64,
+    #[serde(rename = "hint_keywords")]
+    pub hint_keywords: Value,
+    #[serde(rename = "show_disclaimer")]
+    pub show_disclaimer: bool,
+    #[serde(rename = "json_data")]
+    pub json_data: String,
+    #[serde(rename = "query_rewrite")]
+    pub query_rewrite: QueryRewrite,
+    #[serde(rename = "disclaimer_infos")]
     // pub disclaimer_infos: Vec<Value>,
-    // pub disclaimer_infos: Value,
-    // #[serde(rename = "need_next_search")]
-    // pub need_next_search: bool,
-    // #[serde(rename = "low_result")]
-    // pub low_result: LowResult,
-    // #[serde(rename = "autoplay_info")]
-    // pub autoplay_info: Value,
-    // #[serde(rename = "food_item_info")]
-    // pub food_item_info: FoodItemInfo,
-    // #[serde(rename = "search_tracking")]
-    // pub search_tracking: String,
-    // #[serde(rename = "search_sessionid")]
-    // pub search_sessionid: Value,
-    // #[serde(rename = "batch_size")]
-    // pub batch_size: i64,
-    // #[serde(rename = "search_item_bff_tracking")]
-    // pub search_item_bff_tracking: String,
-    // #[serde(rename = "user_info")]
-    // pub user_info: UserInfo,
-    // #[serde(rename = "request_id")]
-    // pub request_id: String,
-    // #[serde(rename = "cached_result")]
-    // pub cached_result: Value,
+    pub disclaimer_infos: Value,
+    #[serde(rename = "need_next_search")]
+    pub need_next_search: bool,
+    #[serde(rename = "low_result")]
+    pub low_result: LowResult,
+    #[serde(rename = "autoplay_info")]
+    pub autoplay_info: Value,
+    #[serde(rename = "food_item_info")]
+    pub food_item_info: FoodItemInfo,
+    #[serde(rename = "search_tracking")]
+    pub search_tracking: String,
+    #[serde(rename = "search_sessionid")]
+    pub search_sessionid: Value,
+    #[serde(rename = "batch_size")]
+    pub batch_size: i64,
+    #[serde(rename = "search_item_bff_tracking")]
+    pub search_item_bff_tracking: String,
+    #[serde(rename = "user_info")]
+    pub user_info: UserInfo,
+    #[serde(rename = "request_id")]
+    pub request_id: String,
+    #[serde(rename = "cached_result")]
+    pub cached_result: Value,
     // pub experiments: Vec<Experiment>,
-    // pub experiments: Value,
-    // #[serde(rename = "item_extra_config")]
-    // pub item_extra_config: String,
+    pub experiments: Value,
+    #[serde(rename = "item_extra_config")]
+    pub item_extra_config: String,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
