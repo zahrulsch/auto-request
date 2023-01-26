@@ -6,7 +6,7 @@ mod test_shopee_search_json {
   #[tokio::test]
   async fn test_request() -> Result<()> {
     let mut shopee = Shopee::new(
-      "https://mall.shopee.co.id/api/v4/search/search_items?by=relevancy&keyword=solder&newest=0&order=desc&page=2&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2",
+      "https://mall.shopee.co.id/api/v4/search/search_items?by=relevancy&keyword=minyak&newest=20&order=desc&page=1&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2",
       UrlType::Search,
       auto_requester::ReqMethod::Get
     );
@@ -17,7 +17,7 @@ mod test_shopee_search_json {
 
     response_json.items.iter()
       .for_each(|item| {
-        println!("name: {}", item.item_basic.name);
+        println!("name: {:?}", item.item_basic.name);
         println!("-------------");
       });
 

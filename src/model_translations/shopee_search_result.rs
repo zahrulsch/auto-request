@@ -5,63 +5,63 @@ use serde_json::Value;
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ShopeeSearchResult {
-    #[serde(rename = "bff_meta")]
-    pub bff_meta: Value,
-    pub error: Value,
-    #[serde(rename = "error_msg")]
-    pub error_msg: Value,
-    #[serde(rename = "reserved_keyword")]
-    pub reserved_keyword: Value,
-    #[serde(rename = "suggestion_algorithm")]
-    pub suggestion_algorithm: Value,
-    pub algorithm: String,
-    #[serde(rename = "total_count")]
-    pub total_count: i64,
-    pub nomore: bool,
+    // #[serde(rename = "bff_meta")]
+    // pub bff_meta: Value,
+    // pub error: Value,
+    // #[serde(rename = "error_msg")]
+    // pub error_msg: Value,
+    // #[serde(rename = "reserved_keyword")]
+    // pub reserved_keyword: Value,
+    // #[serde(rename = "suggestion_algorithm")]
+    // pub suggestion_algorithm: Value,
+    // pub algorithm: String,
+    // #[serde(rename = "total_count")]
+    // pub total_count: Value,
+    // pub nomore: bool,
     pub items: Vec<Item>,
     // pub items: Value,
-    #[serde(rename = "price_adjust")]
-    pub price_adjust: Value,
-    pub adjust: Adjust,
-    #[serde(rename = "total_ads_count")]
-    pub total_ads_count: i64,
-    #[serde(rename = "hint_keywords")]
-    pub hint_keywords: Value,
-    #[serde(rename = "show_disclaimer")]
-    pub show_disclaimer: bool,
-    #[serde(rename = "json_data")]
-    pub json_data: String,
-    #[serde(rename = "query_rewrite")]
-    pub query_rewrite: QueryRewrite,
-    #[serde(rename = "disclaimer_infos")]
+    // #[serde(rename = "price_adjust")]
+    // pub price_adjust: Value,
+    // pub adjust: Adjust,
+    // #[serde(rename = "total_ads_count")]
+    // pub total_ads_count: i64,
+    // #[serde(rename = "hint_keywords")]
+    // pub hint_keywords: Value,
+    // #[serde(rename = "show_disclaimer")]
+    // pub show_disclaimer: bool,
+    // #[serde(rename = "json_data")]
+    // pub json_data: String,
+    // #[serde(rename = "query_rewrite")]
+    // pub query_rewrite: QueryRewrite,
+    // #[serde(rename = "disclaimer_infos")]
     // pub disclaimer_infos: Vec<Value>,
-    pub disclaimer_infos: Value,
-    #[serde(rename = "need_next_search")]
-    pub need_next_search: bool,
-    #[serde(rename = "low_result")]
-    pub low_result: LowResult,
-    #[serde(rename = "autoplay_info")]
-    pub autoplay_info: Value,
-    #[serde(rename = "food_item_info")]
-    pub food_item_info: FoodItemInfo,
-    #[serde(rename = "search_tracking")]
-    pub search_tracking: String,
-    #[serde(rename = "search_sessionid")]
-    pub search_sessionid: Value,
-    #[serde(rename = "batch_size")]
-    pub batch_size: i64,
-    #[serde(rename = "search_item_bff_tracking")]
-    pub search_item_bff_tracking: String,
-    #[serde(rename = "user_info")]
-    pub user_info: UserInfo,
-    #[serde(rename = "request_id")]
-    pub request_id: String,
-    #[serde(rename = "cached_result")]
-    pub cached_result: Value,
+    // pub disclaimer_infos: Value,
+    // #[serde(rename = "need_next_search")]
+    // pub need_next_search: bool,
+    // #[serde(rename = "low_result")]
+    // pub low_result: LowResult,
+    // #[serde(rename = "autoplay_info")]
+    // pub autoplay_info: Value,
+    // #[serde(rename = "food_item_info")]
+    // pub food_item_info: FoodItemInfo,
+    // #[serde(rename = "search_tracking")]
+    // pub search_tracking: String,
+    // #[serde(rename = "search_sessionid")]
+    // pub search_sessionid: Value,
+    // #[serde(rename = "batch_size")]
+    // pub batch_size: i64,
+    // #[serde(rename = "search_item_bff_tracking")]
+    // pub search_item_bff_tracking: String,
+    // #[serde(rename = "user_info")]
+    // pub user_info: UserInfo,
+    // #[serde(rename = "request_id")]
+    // pub request_id: String,
+    // #[serde(rename = "cached_result")]
+    // pub cached_result: Value,
     // pub experiments: Vec<Experiment>,
-    pub experiments: Value,
-    #[serde(rename = "item_extra_config")]
-    pub item_extra_config: String,
+    // pub experiments: Value,
+    // #[serde(rename = "item_extra_config")]
+    // pub item_extra_config: String,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -74,6 +74,7 @@ pub struct Item {
     pub distance: Value,
     #[serde(rename = "match_type")]
     pub match_type: Option<i64>,
+
     #[serde(rename = "ads_keyword")]
     pub ads_keyword: Option<String>,
     #[serde(rename = "deduction_info")]
@@ -134,13 +135,13 @@ pub struct ItemBasic {
     pub sold: i64,
     #[serde(rename = "historical_sold")]
     pub historical_sold: i64,
-    pub liked: bool,
+    // pub liked: bool,
     #[serde(rename = "liked_count")]
     pub liked_count: i64,
     #[serde(rename = "view_count")]
     pub view_count: Value,
     pub catid: i64,
-    pub brand: String,
+    // pub brand: String,
     #[serde(rename = "cmt_count")]
     pub cmt_count: i64,
     pub flag: i64,
@@ -177,94 +178,94 @@ pub struct ItemBasic {
     // pub video_info_list: Value,
     pub video_info_list: Option<Vec<VideoInfoList>>,
     #[serde(rename = "tier_variations")]
-    // pub tier_variations: Value,
-    pub tier_variations: Option<Vec<TierVariation>>,
+    pub tier_variations: Value,
+    // pub tier_variations: Option<Vec<TierVariation>>,
     #[serde(rename = "item_rating")]
     pub item_rating: ItemRating,
     #[serde(rename = "item_type")]
     pub item_type: i64,
-    #[serde(rename = "reference_item_id")]
-    pub reference_item_id: String,
-    #[serde(rename = "transparent_background_image")]
-    pub transparent_background_image: String,
-    #[serde(rename = "is_adult")]
-    pub is_adult: bool,
+    // #[serde(rename = "reference_item_id")]
+    // pub reference_item_id: String,
+    // #[serde(rename = "transparent_background_image")]
+    // pub transparent_background_image: String,
+    // #[serde(rename = "is_adult")]
+    // pub is_adult: bool,
     #[serde(rename = "badge_icon_type")]
     pub badge_icon_type: i64,
-    #[serde(rename = "shopee_verified")]
-    pub shopee_verified: bool,
-    #[serde(rename = "is_official_shop")]
-    pub is_official_shop: bool,
-    #[serde(rename = "show_official_shop_label")]
-    pub show_official_shop_label: bool,
-    #[serde(rename = "show_shopee_verified_label")]
-    pub show_shopee_verified_label: bool,
-    #[serde(rename = "show_official_shop_label_in_title")]
-    pub show_official_shop_label_in_title: bool,
-    #[serde(rename = "is_cc_installment_payment_eligible")]
-    pub is_cc_installment_payment_eligible: bool,
-    #[serde(rename = "is_non_cc_installment_payment_eligible")]
-    pub is_non_cc_installment_payment_eligible: bool,
-    #[serde(rename = "coin_earn_label")]
-    pub coin_earn_label: Value,
-    #[serde(rename = "show_free_shipping")]
-    pub show_free_shipping: bool,
-    #[serde(rename = "preview_info")]
-    pub preview_info: Value,
-    #[serde(rename = "coin_info")]
-    pub coin_info: Value,
-    #[serde(rename = "exclusive_price_info")]
-    pub exclusive_price_info: Value,
+    // #[serde(rename = "shopee_verified")]
+    // pub shopee_verified: bool,
+    // #[serde(rename = "is_official_shop")]
+    // pub is_official_shop: bool,
+    // #[serde(rename = "show_official_shop_label")]
+    // pub show_official_shop_label: bool,
+    // #[serde(rename = "show_shopee_verified_label")]
+    // pub show_shopee_verified_label: bool,
+    // #[serde(rename = "show_official_shop_label_in_title")]
+    // pub show_official_shop_label_in_title: bool,
+    // #[serde(rename = "is_cc_installment_payment_eligible")]
+    // pub is_cc_installment_payment_eligible: bool,
+    // #[serde(rename = "is_non_cc_installment_payment_eligible")]
+    // pub is_non_cc_installment_payment_eligible: bool,
+    // #[serde(rename = "coin_earn_label")]
+    // pub coin_earn_label: Value,
+    // #[serde(rename = "show_free_shipping")]
+    // pub show_free_shipping: bool,
+    // #[serde(rename = "preview_info")]
+    // pub preview_info: Value,
+    // #[serde(rename = "coin_info")]
+    // pub coin_info: Value,
+    // #[serde(rename = "exclusive_price_info")]
+    // pub exclusive_price_info: Value,
     #[serde(rename = "bundle_deal_id")]
     pub bundle_deal_id: i64,
-    #[serde(rename = "can_use_bundle_deal")]
-    pub can_use_bundle_deal: bool,
-    #[serde(rename = "bundle_deal_info")]
-    pub bundle_deal_info: Option<BundleDealInfo>,
-    #[serde(rename = "is_group_buy_item")]
-    pub is_group_buy_item: Value,
-    #[serde(rename = "has_group_buy_stock")]
-    pub has_group_buy_stock: Value,
-    #[serde(rename = "group_buy_info")]
-    pub group_buy_info: Value,
+    // #[serde(rename = "can_use_bundle_deal")]
+    // pub can_use_bundle_deal: bool,
+    // #[serde(rename = "bundle_deal_info")]
+    // pub bundle_deal_info: Option<BundleDealInfo>,
+    // #[serde(rename = "is_group_buy_item")]
+    // pub is_group_buy_item: Value,
+    // #[serde(rename = "has_group_buy_stock")]
+    // pub has_group_buy_stock: Value,
+    // #[serde(rename = "group_buy_info")]
+    // pub group_buy_info: Value,
     #[serde(rename = "welcome_package_type")]
     pub welcome_package_type: i64,
-    #[serde(rename = "welcome_package_info")]
-    pub welcome_package_info: Value,
+    // #[serde(rename = "welcome_package_info")]
+    // pub welcome_package_info: Value,
     #[serde(rename = "add_on_deal_info")]
     pub add_on_deal_info: Option<AddOnDealInfo>,
-    #[serde(rename = "can_use_wholesale")]
-    pub can_use_wholesale: bool,
-    #[serde(rename = "is_preferred_plus_seller")]
-    pub is_preferred_plus_seller: bool,
-    #[serde(rename = "shop_location")]
-    pub shop_location: String,
-    #[serde(rename = "has_model_with_available_shopee_stock")]
-    pub has_model_with_available_shopee_stock: bool,
-    #[serde(rename = "voucher_info")]
-    pub voucher_info: Value,
-    #[serde(rename = "can_use_cod")]
-    pub can_use_cod: bool,
-    #[serde(rename = "is_on_flash_sale")]
-    pub is_on_flash_sale: bool,
-    #[serde(rename = "spl_installment_tenure")]
-    pub spl_installment_tenure: Value,
-    #[serde(rename = "is_live_streaming_price")]
-    pub is_live_streaming_price: Value,
-    #[serde(rename = "is_mart")]
-    pub is_mart: bool,
-    #[serde(rename = "pack_size")]
-    pub pack_size: Value,
+    // #[serde(rename = "can_use_wholesale")]
+    // pub can_use_wholesale: bool,
+    // #[serde(rename = "is_preferred_plus_seller")]
+    // pub is_preferred_plus_seller: bool,
+    // #[serde(rename = "shop_location")]
+    // pub shop_location: String,
+    // #[serde(rename = "has_model_with_available_shopee_stock")]
+    // pub has_model_with_available_shopee_stock: bool,
+    // #[serde(rename = "voucher_info")]
+    // pub voucher_info: Value,
+    // #[serde(rename = "can_use_cod")]
+    // pub can_use_cod: bool,
+    // #[serde(rename = "is_on_flash_sale")]
+    // pub is_on_flash_sale: bool,
+    // #[serde(rename = "spl_installment_tenure")]
+    // pub spl_installment_tenure: Value,
+    // #[serde(rename = "is_live_streaming_price")]
+    // pub is_live_streaming_price: Value,
+    // #[serde(rename = "is_mart")]
+    // pub is_mart: bool,
+    // #[serde(rename = "pack_size")]
+    // pub pack_size: Value,
     #[serde(rename = "deep_discount_skin")]
     pub deep_discount_skin: Option<DeepDiscountSkin>,
-    #[serde(rename = "is_service_by_shopee")]
-    pub is_service_by_shopee: bool,
-    #[serde(rename = "spl_repayment_label_repayment")]
-    pub spl_repayment_label_repayment: Value,
-    #[serde(rename = "spl_repayment_label_text")]
-    pub spl_repayment_label_text: Value,
-    #[serde(rename = "highlight_video")]
-    pub highlight_video: Value,
+    // #[serde(rename = "is_service_by_shopee")]
+    // pub is_service_by_shopee: bool,
+    // #[serde(rename = "spl_repayment_label_repayment")]
+    // pub spl_repayment_label_repayment: Value,
+    // #[serde(rename = "spl_repayment_label_text")]
+    // pub spl_repayment_label_text: Value,
+    // #[serde(rename = "highlight_video")]
+    // pub highlight_video: Value,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]

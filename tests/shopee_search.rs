@@ -10,7 +10,7 @@ mod test_shopee_search {
     let by = ["relevancy", "ctime", "sales"];
 
     for b in by.iter() {
-      let url = String::from("https://mall.shopee.co.id/api/v4/search/search_items?by={by}&keyword=bunga&newest=0&order=desc&page=1&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2")
+      let url = String::from("https://mall.shopee.co.id/api/v4/search/search_items?by={by}&keyword=minyak&newest=0&order=desc&page=1&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2")
         .replace("{by}", b);
 
       let mut shopee = Shopee::new(
