@@ -239,8 +239,8 @@ pub struct ItemBasic {
     // pub can_use_wholesale: bool,
     // #[serde(rename = "is_preferred_plus_seller")]
     // pub is_preferred_plus_seller: bool,
-    // #[serde(rename = "shop_location")]
-    // pub shop_location: String,
+    #[serde(rename = "shop_location")]
+    pub shop_location: String,
     // #[serde(rename = "has_model_with_available_shopee_stock")]
     // pub has_model_with_available_shopee_stock: bool,
     // #[serde(rename = "voucher_info")]
